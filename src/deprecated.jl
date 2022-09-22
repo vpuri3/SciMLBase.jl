@@ -5,7 +5,6 @@ const AbstractQuadratureSolution = AbstractIntegralSolution
 
 # Deprecated High Level things
 # All downstream uses need to be removed before removing
-
 const DEAlgorithm = AbstractDEAlgorithm
 const SciMLAlgorithm = AbstractSciMLAlgorithm
 const DEProblem = AbstractDEProblem
@@ -51,7 +50,7 @@ function DiffEqScalar(args...; kwargs...)
 end
 
 const AffineDiffEqOperator = SciMLOperators.AffineOperator
-function AffineDiffEqOperator{T}(As, bs, cache = nothing) where{T}
+function AffineDiffEqOperator{T}(As, bs, cache = nothing) where {T}
     @warn "SciMLBase.AffineDiffEqOperator is deprecated.
     Use SciMLOperators.AffineOperator instead"
 
